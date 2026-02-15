@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const suggestionsRef = useRef(null);
-
+console.log("API URL:", API_URL);
   // 🔥 Auto scroll when suggestions update
   useEffect(() => {
     if (suggestions && suggestionsRef.current) {
