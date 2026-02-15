@@ -3,6 +3,8 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
 function App() {
+  console.log("ENV VALUE:", import.meta.env.VITE_API_URL);
+
   const API_URL = import.meta.env.VITE_API_URL ;
   const [file, setFile] = useState(null);
   const [text, setText] = useState("");
