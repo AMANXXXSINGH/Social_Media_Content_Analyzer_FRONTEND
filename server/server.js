@@ -8,7 +8,9 @@ const Tesseract = require("tesseract.js");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin:"https://social-media-content-analyzer-5rme5a76u-amanxxxsinghs-projects.vercel.app/"
+}));
 app.use(express.json());
 
 const upload = multer({ dest: "./uploads/" });
