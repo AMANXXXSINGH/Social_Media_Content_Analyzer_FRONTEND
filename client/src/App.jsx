@@ -3,9 +3,9 @@ import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
 function App() {
-  console.log("ENV VALUE:", import.meta.env.VITE_API_URL);
+ 
 
-  const API_URL = "https://social-media-content-analyzer-sxzk.onrender.com";
+  const API_URL = "https://social-media-content-analyzer-backe.vercel.app";
   const [file, setFile] = useState(null);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState("");
@@ -32,7 +32,7 @@ function App() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://social-media-content-analyzer-sxzk.onrender.com/upload",
+        "https://social-media-content-analyzer-backe.vercel.app",
         formData,
       );
       setText(res.data.text);
